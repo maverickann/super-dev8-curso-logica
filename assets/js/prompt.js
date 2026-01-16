@@ -25,6 +25,7 @@ function solicitarFloat(){
     
 
 }
+//undefined
 function solicitarBoolean(){
     let vencido = confirm ("Produto vencido?");
     alert("Produto vencido:"+vencido)
