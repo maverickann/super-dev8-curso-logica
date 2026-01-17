@@ -61,7 +61,7 @@ function exercicioSete() {
     while (indice < 6) {
         let valorVendas = parseFloat(prompt("Digite o valor das vendas:"))
         total + valorVendas;
-        let comissao = total / 0,5;
+        let comissao = total / 0.5;
         indice + 1;
 
         alert("Total de vendas :" + total + "\nComissão sobre o total de vendas:" + comissao)
@@ -101,9 +101,9 @@ function exercicioDez() {
     while (indice < 10) {
         let number = parseInt(prompt("Digite um numero:"))
         if (number / 2 == 0) {
-            par = ++ ;
+            par ++ ;
         } else {
-            impar = ++ ;
+            impar  ++ ;
         }
     }
     alert("numeros pares:" + par + "\nNumeros impares" + impar)
@@ -153,18 +153,19 @@ function exercicioQuatorze() {
     let indice = 0;
     let soma = 0;
     let maior = 0;
-    let menor = 0;
+    let menor = 99999999;
     while (indice < 5) {
         let salario = parseFloat(prompt("Digite o salário:"));
         soma += salario;
         if (salario >= maior){
 
             maior = salario;
-        }else{
+        }
+        if(salario<menor){
 
             menor = salario;
         }  
-        indice++;
+        indice=i+1;
     }
     let media = soma / 5;
  if (media> 3000) {
@@ -362,7 +363,8 @@ function exercicio27() {
     let indice = 0;
     let ruim = 0, regular = 0, bom = 0;
     while (indice < 10) {
-        let nota = parseInt(prompt("Avaliação (1 a 5):"));
+        let nota = parseInt(prompt("Avaliação (1 a 5)  :"+"\nRealizados:"+(indice+1)+"/10"
+        ));
         if (nota <= 2) ruim++;
         else if (nota == 3) regular++;
         else bom++;
@@ -814,7 +816,7 @@ function exercicio48() {
         let forma = prompt("Pagamento (CRÉDITO/DÉBITO/PIX)");
 
         soma += valor;
-        total++;
+        total=total+1;
 
         if (valor > maior) maior = valor;
         if (valor < menor) menor = valor;
@@ -835,7 +837,7 @@ function exercicio48() {
 }function exercicios49() {
 
     let indice = 0;
-    let quantAlunos = parseInt(prompt("Quantos alunos você deseja cadastrar?"));
+    let quantidadeAlunos = parseInt(prompt("Quantos alunos você deseja cadastrar?"));
     
     let somaIdade = 0;
     let pesoBaixo = 0;
@@ -847,7 +849,7 @@ function exercicio48() {
     let nomeMenor = "";
     let nomeMaior = "";
 
-    while (indice < quantAlunos) {
+    while (indice < quantidadeAlunos) {
 
         let nome = prompt("Digite o nome do aluno:");
         let idade = parseInt(prompt("Digite a idade do aluno"));
@@ -879,7 +881,7 @@ function exercicio48() {
         indice++;
     }
 
-    let mediaIdade = somaIdade / quantAlunos;
+    let mediaIdade = somaIdade / quantidadeAlunos;
 
     alert(
         "O aluno com maior IMC é " + nomeMaior + " com IMC de " + maiorImc.toFixed(2) +
@@ -889,7 +891,7 @@ function exercicio48() {
         "\n- Peso normal: " + pesoNormal +
         "\n- Sobrepeso: " + pesoAcima +
         "\n\nA média de idade dos alunos é: " + mediaIdade +
-        " de " + quantAlunos + " alunos cadastrados"
+        " de " + quantidadeAlunos + " alunos cadastrados"
     );
 }
 
