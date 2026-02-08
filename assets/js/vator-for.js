@@ -126,3 +126,91 @@ function jogoPalavras() {
 
     }
 }
+function exercicio001() {
+    let nomeCell = [];
+    let estoque = [];
+    let apresentaçaoTexto = "";
+    let status = [];
+    let menorEstoque = 9999, maiorEstoque = 0, nomeCellMaior = "";
+    for (let i = 0; i < 5; i += 1) {
+        let nome = prompt("Digite o nome de 5 smartphones:");
+        let quantidadeEstoque = parseInt(prompt("Digite a quantidade  que tem no estoque:"));
+        nomeCell.push(nome);
+        estoque.push(quantidadeEstoque);
+
+        if (quantidadeEstoque < menorEstoque) {
+            menorEstoque = quantidadeEstoque;
+        } if (quantidadeEstoque > maiorEstoque) {
+            maiorEstoque = quantidadeEstoque;
+            nomeCellMaior = nome;
+        }
+        if (quantidadeEstoque >= 10) {
+            status.push("Elevado");
+
+        } else if (quantidadeEstoque < 10 && quantidadeEstoque >= 7) {
+            status.push("Estavel");
+
+        } else if (quantidadeEstoque >= 4 && quantidadeEstoque < 7) {
+            status.push("Preocupante");
+
+        } else if (quantidadeEstoque >= 0 && quantidadeEstoque < 4) {
+            status.push("Urgente");
+
+        } else {
+            alert("Deu erro");
+
+        }
+
+    }
+
+    for (let i = 0; i < 5; i += 1) {
+        apresentaçaoTexto += nomeCell[i] + "\nQuantidade no estoque:" + estoque[i] + "  " + status[i] + "\n";
+
+    }
+
+    alert(apresentaçaoTexto + "\nMaior estoque:" + nomeCellMaior + "  " + maiorEstoque)
+
+}
+function exercicio002() {
+    let produtos = [];
+    let categorias = [], preço = [], clase = [];
+    let maiorPreço = 0, menorPreço = 999999, maiorProduto = "", MenorProduto = "";
+    for (let i = 0; i < 5; i += 1) {
+        let nomeProdutoa = prompt("Digite o nome de 5 produtos");
+        let nomeCategoria = prompt("Digite qual é a categoria:");
+        let oferta = parseFloat(prompt("Digite qual é o preço:"));
+
+        produtos.push(nomeProdutoa);
+        categorias.push(nomeCategoria);
+        preço.push(oferta);
+
+        if (oferta >= 100) {
+            clase.push("Caro");
+        } else if (oferta >= 50 && oferta < 100) {
+            clase.push("Medio");
+
+        } else if (oferta >= 20 && oferta < 50) {
+            clase.push("Barato");
+
+        } else {
+            clase.push("Muito barato");
+
+
+        }
+
+        if (oferta < menorPreço) {
+            menorPreço = oferta;
+            MenorProduto = nomeProdutoa
+        }
+        if (oferta > maiorPreço) {
+            maiorPreço = oferta;
+            maiorProduto = nomeProdutoa;
+        }
+    }
+
+        for (let i = 0; i < 5; i += 1) {
+            texto+="Produto:"+produtos[i]+" "+categorias+
+
+        }
+
+}
