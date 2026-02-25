@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/seletores-tag">
+</head>
+
+<body>
+
+    <p>Minecraft é um jogo eletrônico sandbox de sobrevivência de 2011 desenvolvido e publicado pela desenvolvedora
+        sueca Mojang Studios. Originalmente criado por Markus "Notch" Persson usando a linguagem de programação Java, a
+        primeira versão alfa pública foi lançada em 17 de maio de 2009.</p>
+
+        <div class="">
+            <span>
+                tamanho da fonte
+            </span>
+            <div>
+                <!--quando o tipo é radio tem que tem value-->
+                <input type="radio" name="fonte-pequena" name="fonte" value="8">
+                <label for="fonte-pequena">pequena</label>
+
+                <input type="radio" name="fonte-media" name="fonte" value="16">
+                <label for="fonte-media">media</label>
+
+                <input type="radio" name="fonte-grande" name="fonte" value="24">
+                <label for="fonte-grande">grande</label>
+            </div>
+        </div>
+        <div>
+            <label for="cor-texto">Cor do texto</label>
+            <select  id="cor-texto">
+                <option value=""disabled selected>Escolha uma cor</option>
+                <option value="blue">blue</option>
+                <option value="yellowgreen">yellowburn</option>
+                <option value="purple">purple</option>
+                <option value="red">red</option>
+            </select>
+        </div>
+        <div>
+            <label for="cor-fundo">Cor de fundo</label>
+            <input type="color" id="cor-fundo">
+        </div>
+        <div>
+            <img id="imagem-mine">
+            <img src="../image/fotos do mine/mine01.jpg" alt="">
+            <img src="../image/fotos do mine/mine02.jpg" alt="">
+            <img src="../image/fotos do mine/mine03.jpg" alt="">
+        </div>
+    <script src="../assets/js/seletores-tag.js"></script>
+
+</body>
+
+</html>
